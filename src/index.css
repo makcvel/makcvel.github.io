@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 204 45% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 204 45% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 204 45% 18%;
+
+    --primary: 196 100% 41%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 204 45% 18%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 204 30% 40%;
+
+    --accent: 24 100% 65%;
+    --accent-foreground: 204 45% 18%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 204 30% 90%;
+    --input: 204 30% 90%;
+    --ring: 196 100% 41%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 204 45% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 204 45% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 204 45% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 196 100% 41%;
+    --primary-foreground: 204 45% 8%;
+
+    --secondary: 204 45% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 204 45% 15%;
+    --muted-foreground: 204 30% 70%;
+
+    --accent: 24 100% 65%;
+    --accent-foreground: 204 45% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 204 45% 20%;
+    --input: 204 45% 20%;
+    --ring: 196 100% 41%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .animate-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.7s ease-out;
+  }
+}
