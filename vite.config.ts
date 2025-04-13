@@ -1,22 +1,18 @@
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: "/makcvel.github.io/", // Замените на имя вашего репозитория
   server: {
-    host: "::",
-    port: 8080,
+    // ... keep existing code (server configuration)
   },
   plugins: [
-    react(),
-    mode === 'development' &&
-    componentTagger(),
-  ].filter(Boolean),
+    // ... keep existing code (plugins configuration)
+  ],
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
+    // ... keep existing code (resolve configuration)
   },
 }));
